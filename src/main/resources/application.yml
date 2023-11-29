@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:mysql://${STACKHERO_MYSQL_HOST:localhost}:${STACKHERO_MYSQL_PORT:3306}/voting-system?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: ${STACKHERO_MYSQL_USER:root}
+    password: ${STACKHERO_MYSQL_ROOT_PASSWORD:pass}
+    driver-class-name: com.mysql.jdbc.Driver
