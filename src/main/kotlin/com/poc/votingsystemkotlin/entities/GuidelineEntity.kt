@@ -1,17 +1,15 @@
 package com.poc.votingsystemkotlin.entities
 
 import jakarta.persistence.*
-import java.time.ZoneOffset
+import java.time.LocalDateTime
 
 
 @Entity
-@Table(name = "TB_GUIDELINES")
-data class GuidelineEntity(
+@Table(name = "TB_GUIDELINES", schema = "voting-system")
+class GuidelineEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
-    val description: String?,
-    val dateCreate: ZoneOffset,
-    @OneToMany
-    val sessions: List<VoteSessionEntity>,
+    var id: Long,
+    var description: String?,
+    var dateCreate: LocalDateTime,
 )

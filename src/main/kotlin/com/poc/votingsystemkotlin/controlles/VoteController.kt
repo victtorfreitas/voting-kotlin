@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 class VoteController {
 
     @GetMapping("/hello-word")
-    fun index() = "Hello Word"
+    fun index() = "fabia isabela"
 
     @GetMapping("/")
     fun index(@RequestParam name: String) = "Hello, $name"
